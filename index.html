@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Khaleq Salehi - Portfolio</title>
+<meta name="description" content="Khaleq Salehi - trading systems, Web3 dApps and AI automation. Portfolio and selected work." />
+<meta name="keywords" content="Khaleq Salehi, Portfolio, Resume, MQL5, MetaTrader 5, Trading, AlgoTrading, Quant, Price Action, ICT, SMC, Wyckoff, Market Profile, Python, Web3, Solidity, Next.js, TypeScript, Hardhat, viem, Prisma, Blockchain, OnChain, Dashboard, AI, Automation, OpenSource" />
+<style>
+  :root{
+    --bg:#0b1020; --bg2:#0f1730; --card:#121b36; --line:#22305a;
+    --ink:#eef2ff; --muted:#9aa7c7; --accent:#6ea8fe; --accent2:#7ee0c0; --warm:#ffce6a;
+    --shadow:0 10px 30px rgba(2,6,23,.45);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    background:radial-gradient(1200px 600px at 15% -10%,#1b2a55 0%,transparent 60%),var(--bg);
+    color:var(--ink); font-family:"Segoe UI",system-ui,-apple-system,Roboto,Ubuntu,Arial,sans-serif;
+    line-height:1.65; -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px 80px}
+  [data-lang="en"] .fa-only{display:none !important}
+  [data-lang="fa"] .en-only{display:none !important}
+  [data-lang="fa"] .fa-only{direction:rtl;text-align:right}
+  nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:22px 0}
+  .brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.2px}
+  .logo{width:38px;height:38px;border-radius:11px;background:linear-gradient(135deg,var(--accent),var(--accent2));
+    display:grid;place-items:center;color:#08122b;font-weight:900}
+  .langbtn{border:1px solid var(--line);background:#0e1731;color:var(--ink);padding:8px 14px;border-radius:999px;
+    cursor:pointer;font-size:13px;font-weight:700}
+  .langbtn:hover{border-color:var(--accent);color:#fff}
+  header.hero{padding:46px 0 30px}
+  .kicker{display:inline-block;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent2);
+    background:rgba(126,224,192,.10);border:1px solid rgba(126,224,192,.28);padding:6px 12px;border-radius:999px}
+  h1{font-size:52px;line-height:1.06;margin:18px 0 10px;letter-spacing:-.02em}
+  .tag{font-size:19px;color:var(--muted);max-width:760px;margin:0}
+  .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+  .chip{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:var(--card);
+    padding:9px 14px;border-radius:999px;font-size:14px;color:var(--ink);text-decoration:none}
+  .chip:hover{border-color:var(--accent)}
+  .chip b{font-weight:600;color:var(--muted);font-size:12.5px;letter-spacing:.06em;text-transform:uppercase}
+  h2{font-size:26px;margin:52px 0 6px;letter-spacing:-.01em}
+  .sub{color:var(--muted);margin:0 0 22px}
+  .grid{display:grid;gap:16px}
+  .g2{grid-template-columns:repeat(2,1fr)}
+  .g3{grid-template-columns:repeat(3,1fr)}
+  @media(max-width:880px){.g2,.g3{grid-template-columns:1fr}h1{font-size:38px}}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;box-shadow:var(--shadow)}
+  .card h3{margin:0 0 8px;font-size:17.5px}
+  .card p{margin:0;color:var(--muted);font-size:14.5px}
+  .card .role{color:var(--accent2);font-size:13px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;margin-bottom:10px;display:block}
+  .tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:14px}
+  .tags span{font-size:12px;color:#cfe0ff;background:rgba(110,168,254,.12);border:1px solid rgba(110,168,254,.25);
+    padding:4px 10px;border-radius:999px}
+  .linkline{margin-top:14px;font-size:14px}
+  .linkline a{color:var(--accent);text-decoration:none}
+  .linkline a:hover{text-decoration:underline}
+  .stars{color:var(--warm);font-weight:700}
+  figure{margin:0;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:12px;box-shadow:var(--shadow)}
+  figure img{width:100%;height:auto;border-radius:10px;display:block}
+  figcaption{color:var(--muted);font-size:13.5px;padding:12px 6px 4px}
+  .feature{border-left:4px solid var(--warm)}
+  footer{margin-top:64px;padding-top:24px;border-top:1px solid var(--line);color:var(--muted);font-size:14px;
+    display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;align-items:center}
+  a{color:var(--accent)}
+  .badge{display:inline-block;font-size:12px;color:#ffd98a;background:rgba(255,206,106,.12);
+    border:1px solid rgba(255,206,106,.3);padding:3px 10px;border-radius:999px;margin-bottom:10px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <nav>
+    <div class="brand"><span class="logo">KS</span><span>Khaleq Salehi</span></div>
+    <button class="langbtn" id="langbtn" onclick="setLang()">????? / English</button>
+  </nav>
+
+  <header class="hero">
+    <span class="kicker en-only">Portfolio &amp; selected work</span>
+    <span class="kicker fa-only">????????? ? ?????</span>
+    <h1 class="en-only">Khaleq Salehi</h1>
+    <h1 class="fa-only">???? ?????</h1>
+    <p class="tag en-only">I build trading systems, Web3 applications, and automation that does the work.</p>
+    <p class="tag fa-only">?? ????????? ????????? ???????????? ??? ? ???????? ?????????? ???????.</p>
+
+    <div class="chips">
+      <a class="chip" href="mailto:khaleq.sa@gmail.com"><b>Email</b> khaleq.sa@gmail.com</a>
+      <a class="chip" href="tel:+989120143697"><b>Tel / WhatsApp / Telegram</b> +98 912 014 3697</a>
+      <a class="chip" href="https://github.com/khalegh2131"><b>GitHub</b> khalegh2131</a>
+    </div>
+  </header>
+
+  <section>
+    <h2 class="en-only">About</h2>
+    <h2 class="fa-only">?????? ??</h2>
+    <p class="sub en-only">Builder across trading technology, decentralized apps, and AI-assisted tooling.</p>
+    <p class="sub fa-only">???????? ????? ?? ?????? ?????? ???????? ???????????? ????????? ? ???????? ??? ??????.</p>
+    <div class="card">
+      <p class="en-only">I work at the intersection of markets and software: MetaTrader&nbsp;5 indicators in MQL5,
+        Python systems for quantitative trading, and full-stack Web3 apps with Next.js, TypeScript and Solidity.
+        I also build automation and AI-agent workflows that turn a request in chat into a finished artifact -
+        research, documents, dashboards and web pages.</p>
+      <p class="fa-only">?? ?? ?????? ????? ????? ? ????????? ??? ??????: ???????????? ???????? ? ?? MQL5?
+        ????????? ??????? ???? ??????? ????? ? ???????????? ??? ????????? ?? Next.js? TypeScript ? Solidity.
+        ?????? ????????? ?????????? ? ????????? ??? ?????? ??????? ?? ?? ??????? ?? ?? ?? ?? ?? ????? ???? ????? ???????:
+        ?????? ???? ??????? ? ?????? ??.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="en-only">Skills</h2>
+    <h2 class="fa-only">????????</h2>
+    <div class="grid g3">
+      <div class="card"><span class="role">Trading</span><h3>MQL5 / MetaTrader 5</h3><p>Indicators, price-action engines, no-repaint pivots, rule validators, on-chart education panels.</p></div>
+      <div class="card"><span class="role">Backend &amp; Data</span><h3>Python</h3><p>Quantitative trading systems, automation pipelines, data processing and scripting.</p></div>
+      <div class="card"><span class="role">Web3 &amp; Web</span><h3>TypeScript / Next.js</h3><p>React 19, Next.js App Router, viem, Solidity, Hardhat, Prisma &amp; PostgreSQL.</p></div>
+    </div>
+    <div class="card" style="margin-top:16px">
+      <p class="en-only"><b>Also:</b> AI-agent automation, prompt/workflow design, HTML/CSS design deliverables, Git &amp; GitHub workflows.</p>
+      <p class="fa-only"><b>??????:</b> ?????????? ?? ????? ??? ??????? ????? ?????? ? ?????????? ????? ????????? ????? HTML/CSS? ? ??? ?? Git ? GitHub.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="en-only">Selected projects</h2>
+    <h2 class="fa-only">????????? ?????</h2>
+    <p class="sub en-only">Pulled from my GitHub - public work you can read and run.</p>
+    <p class="sub fa-only">??????? ?? ??????? ?? - ?????? ????? ?? ????????? ?????? ? ???? ????.</p>
+
+    <div class="grid g2">
+      <div class="card">
+        <span class="role">MQL5 � MetaTrader 5 � <span class="stars">? 2</span></span>
+        <h3>ICT Assistant - Multi-School Price Action Indicator</h3>
+        <p>A free, open-source MT5 indicator that unifies nine trading schools (ICT, SMC, Market Maker Model,
+          Wyckoff, Supply &amp; Demand, Market Profile, Volume Profile, RTM, Al Brooks) into one chart tool.
+          It is both an indicator and a teacher: clicking any object opens a Persian explanation panel with the
+          rule behind it, what invalidates it, and how to verify the numbers by hand. Built on closed-bar
+          analysis (no repaint), with per-timeframe registries and 21 rule validators.</p>
+        <div class="tags"><span>MQL5</span><span>Price Action</span><span>ICT / SMC</span><span>Wyckoff</span><span>Market Profile</span><span>Education UI</span></div>
+        <div class="linkline"><a href="https://github.com/khalegh2131/ICT_indicator">github.com/khalegh2131/ICT_indicator</a></div>
+      </div>
+
+      <div class="card">
+        <span class="role">Next.js � TypeScript � Solidity � Web3</span>
+        <h3>Web3 Membership Access dApp</h3>
+        <p>A membership access dApp where users sign in with an Ethereum wallet (SIWE) and the app decides
+          what they can see from an on-chain membership registry. Sign-in is verified server-side, the
+          protected dashboard renders only after both the session and the on-chain check pass, and the admin
+          panel builds unsigned grant/revoke transactions that the admin's own wallet signs. The backend never
+          holds keys and never broadcasts transactions. Testnet (Sepolia) MVP.</p>
+        <div class="tags"><span>Next.js 15</span><span>React 19</span><span>viem</span><span>Solidity 0.8.24</span><span>Prisma</span><span>Hardhat 3</span><span>Vitest</span></div>
+        <div class="linkline"><a href="https://github.com/khalegh2131/web3-access-dapp">github.com/khalegh2131/web3-access-dapp</a></div>
+      </div>
+
+      <div class="card">
+        <span class="role">Python � Trading systems</span>
+        <h3>AI Trading System</h3>
+        <p>An AI-driven trading system in Python, developed across several iterations (v5 and related branches),
+          exploring automated analysis, signal generation and execution logic for the markets.</p>
+        <div class="tags"><span>Python</span><span>Quant</span><span>Automation</span></div>
+        <div class="linkline"><a href="https://github.com/khalegh2131/AI_Trading_System_v5">github.com/khalegh2131/AI_Trading_System_v5</a></div>
+      </div>
+
+      <div class="card feature">
+        <span class="badge">Featured case study</span>
+        <span class="role">Documentation &amp; Web design</span>
+        <h3>Capability &amp; Use-Case Overview</h3>
+        <p>A self-directed technical documentation and web-design sample: I mapped a product's capabilities and
+          real-world use cases into a single, scannable one-page overview - a landscape capability map plus a
+          clean HTML deliverable. A demonstration of structuring complex information so it is easy to grasp.</p>
+        <div class="tags"><span>Information design</span><span>HTML / CSS</span><span>Diagramming</span><span>Technical writing</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="en-only">Featured sample</h2>
+    <h2 class="fa-only">????????? ????</h2>
+    <p class="sub en-only">Capability &amp; use-case map - inputs and surfaces, core capabilities, and outcomes.</p>
+    <p class="sub fa-only">?????? ??????????? ? ???????? - ????????? ???????????? ???? ? ????????.</p>
+    <figure>
+      <img src="assets/capability-map.svg" alt="Capability map: inputs and surfaces, core capabilities, and use cases" />
+      <figcaption class="en-only">Capability map designed for the overview - from the surfaces you use, through core abilities, to the outcomes you get.</figcaption>
+      <figcaption class="fa-only">?????? ??????????? - ?? ??????? ?????? ?? ???????????? ???? ? ?? ????? ????????.</figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <h2 class="en-only">Hashtags</h2>
+    <h2 class="fa-only">???????</h2>
+    <div class="tags" style="margin-top:4px">
+      <span>#KhaleqSalehi</span><span>#Portfolio</span><span>#Resume</span><span>#MQL5</span><span>#MetaTrader5</span><span>#Trading</span><span>#AlgoTrading</span><span>#Quant</span><span>#PriceAction</span><span>#ICT</span><span>#SMC</span><span>#Wyckoff</span><span>#MarketProfile</span><span>#Python</span><span>#Web3</span><span>#Solidity</span><span>#NextJS</span><span>#TypeScript</span><span>#Hardhat</span><span>#viem</span><span>#Prisma</span><span>#PostgreSQL</span><span>#Blockchain</span><span>#OnChain</span><span>#Dashboard</span><span>#AI</span><span>#Automation</span><span>#OpenSource</span><span>#Iran</span>
+    </div>
+  </section>
+
+  <footer>
+    <span>&copy; <span id="yr"></span> Khaleq Salehi</span>
+    <span class="en-only">Available by email, phone, WhatsApp and Telegram.</span>
+    <span class="fa-only">?? ???? ?????? ????? ??????? ? ?????? ?? ????? ????.</span>
+    <a href="mailto:khaleq.sa@gmail.com">khaleq.sa@gmail.com</a>
+  </footer>
+</div>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  function setLang(){
+    var r = document.documentElement;
+    r.dataset.lang = (r.dataset.lang === 'fa') ? 'en' : 'fa';
+    r.lang = r.dataset.lang;
+    try{ localStorage.setItem('ks_lang', r.dataset.lang); }catch(e){}
+  }
+  try{
+    var saved = localStorage.getItem('ks_lang');
+    if(saved){ document.documentElement.dataset.lang = saved; document.documentElement.lang = saved; }
+  }catch(e){}
+</script>
+</body>
+</html>
