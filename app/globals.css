@@ -1,0 +1,127 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 4%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 4%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 4%;
+
+    --primary: 160 84% 33%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 240 5% 96%;
+    --secondary-foreground: 240 6% 10%;
+
+    --muted: 240 5% 96%;
+    --muted-foreground: 240 4% 46%;
+
+    --accent: 160 60% 94%;
+    --accent-foreground: 161 94% 24%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 98%;
+
+    --success: 160 84% 33%;
+    --success-foreground: 0 0% 100%;
+
+    --border: 240 6% 90%;
+    --input: 240 6% 90%;
+    --ring: 160 84% 39%;
+
+    --sidebar: 240 6% 98%;
+    --sidebar-foreground: 240 6% 20%;
+    --sidebar-accent: 160 60% 94%;
+    --sidebar-accent-foreground: 161 94% 24%;
+    --sidebar-border: 240 6% 91%;
+
+    --chart-1: 160 84% 39%;
+    --chart-2: 199 89% 48%;
+    --chart-3: 258 90% 66%;
+    --chart-4: 38 92% 50%;
+    --chart-5: 347 77% 50%;
+
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 240 10% 4%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 7% 7%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 7% 8%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 160 84% 39%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 240 4% 16%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 4% 14%;
+    --muted-foreground: 240 5% 65%;
+
+    --accent: 161 60% 12%;
+    --accent-foreground: 158 64% 52%;
+
+    --destructive: 0 63% 44%;
+    --destructive-foreground: 0 0% 98%;
+
+    --success: 160 84% 39%;
+    --success-foreground: 0 0% 100%;
+
+    --border: 240 4% 16%;
+    --input: 240 4% 18%;
+    --ring: 160 84% 39%;
+
+    --sidebar: 240 8% 6%;
+    --sidebar-foreground: 240 5% 72%;
+    --sidebar-accent: 161 60% 12%;
+    --sidebar-accent-foreground: 158 64% 52%;
+    --sidebar-border: 240 4% 14%;
+
+    --chart-1: 160 84% 45%;
+    --chart-2: 199 89% 58%;
+    --chart-3: 258 90% 72%;
+    --chart-4: 38 92% 58%;
+    --chart-5: 347 77% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings:
+      'rlig' 1,
+      'calt' 1;
+  }
+
+  /* Tabular figures keep balances and percentages from shifting while polling. */
+  .tabular {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .glow-emerald {
+    box-shadow:
+      0 0 0 1px hsl(var(--primary) / 0.25),
+      0 8px 40px -12px hsl(var(--primary) / 0.45);
+  }
+}
