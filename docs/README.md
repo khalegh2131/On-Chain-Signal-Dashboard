@@ -14,6 +14,7 @@
 | ۰۸ | [08-handover.md](./08-handover.md) | راهنمای راه‌اندازی، بهره‌برداری و انتقال | تیم بعدی |
 | ۰۹ | [09-independent-review.md](./09-independent-review.md) | بازبینی مستقل و پیگیری ایرادها | کارفرما |
 | ۱۰ | [10-final-summary.md](./10-final-summary.md) | جمع‌بندی نهایی، درس‌آموخته‌ها و گام‌های بعدی | کارفرما |
+| ۱۱ | [11-delivery-verification.md](./11-delivery-verification.md) | تأیید تحویل: آزمون نسخهٔ منتشرشده روی گیت‌هاب | تضمین کیفیت |
 
 ## وضعیت فعلی در یک نگاه
 

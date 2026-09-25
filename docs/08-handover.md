@@ -122,3 +122,43 @@ docs/         همین مستندات
 - انتشار روی محیط بیرونی (نیازمند تأیید جداگانه کارفرما).
 - کلیدهای API واقعی.
 - هر تعهد یا قرارداد به نام کارفرما.
+
+## ۱۰. وضعیت انتشار روی GitHub (ثبت‌شده در همین جلسه)
+
+| مورد | مقدار |
+|------|--------|
+| رابط راه دور (remote) | `https://github.com/khalegh2131/On-Chain-Signal-Dashboard.git` |
+| شاخه محلی | `main` |
+| کامیت | `e49d083` — "feat: multi-chain read-only DeFi portfolio dashboard" |
+| شاخه‌ای که پروژه روی آن منتشر شد | `defi-portfolio-dashboard` (۱۷۰ فایل) |
+| شاخه `main` مخزن مقصد | **دست‌نخورده** — همان `index.html`، `README.md` و `assets/capability-map.svg` قبلی |
+| احراز هویت | Git Credential Manager روی ویندوز (کلید/توکن در متن مخزن نیست) |
+
+### چرا مستقیم روی `main` منتشر نشد
+
+مخزن `On-Chain-Signal-Dashboard` از قبل میزبان صفحهٔ پورتفولیوی کارفرما است و تاریخچهٔ گیت آن **هیچ ریشه مشترکی** با این پروژه ندارد. `git push` به `main` با خطای زیر رد می‌شود:
+
+```
+! [rejected]  main -> main (non-fast-forward)
+```
+
+ادامه دادن با `--force` یعنی **پاک شدن صفحهٔ پورتفولیوی منتشرشده**؛ این یک عملیات بازگشت‌ناپذیر روی یک سایت عمومی است و انجام نشد. در عوض پروژه روی یک شاخهٔ **افزایشی و بی‌خطر** منتشر شد که قابل حذف و بازگشت است.
+
+### کار باقی‌مانده روی مخزن
+
+۱. فایل `.v2c/plugin_root` (وضعیت ابزار محیطی) به‌اشتباه وارد کامیت اول شد. دستور پاک‌سازی آن توسط محافظ ایمنی مسدود شد و نیازمند تأیید کارفرما است:
+
+```powershell
+git rm -r --cached .v2c
+git commit --amend --no-edit
+git push --force-with-lease origin main:defi-portfolio-dashboard
+```
+
+۲. برای یک خانهٔ تمیز و مستقل، بهتر است مخزن جداگانه‌ای (مثلاً `defi-portfolio-dashboard`) ساخته شود؛ با احراز هویت موجود، انتقال آن چند ثانیه است.
+
+### بازتولید کامل انتشار
+
+```powershell
+git remote add origin https://github.com/<owner>/<repo>.git
+git push -u origin main:<branch>
+```
